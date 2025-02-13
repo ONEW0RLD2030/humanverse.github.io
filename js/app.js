@@ -22,3 +22,8 @@ const deepSeekMonitor = {
 document.addEventListener('DOMContentLoaded', () => {
   deepSeekMonitor.log('Page loaded');
 });
+// مراقبة أي تغييرات في DOM
+const observer = new MutationObserver((mutations) => {
+  deepSeekMonitor.log('DOM modified');
+});
+observer.observe(document.body, { childList: true, subtree: true });
