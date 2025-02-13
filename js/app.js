@@ -1,4 +1,4 @@
-// تحميل الآيات من ملف JSON
+من// تحميل الآيات من ملف JSON
 fetch('assets/verses.json')
   .then(response => response.json())
   .then(data => {
