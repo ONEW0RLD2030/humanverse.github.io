@@ -1,1 +1,27 @@
+:root {
+    --primary: #2C5F2D; /* أخضر إسلامي */
+    --secondary: #6A1B9A; /* بنفسجي مسيحي */
+    --accent: #FFD700; /* ذهبي يهودي */
+}
 
+body {
+    font-family: 'Amiri', serif;
+    background: #0a192f;
+    color: #fff;
+}
+
+header {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    padding: 2rem;
+}
+
+nav a {
+    color: var(--accent);
+    margin: 0 1rem;
+}
+
+#quran-verses {
+    border: 1px solid var(--primary);
+    padding: 1rem;
+    margin: 1rem;
+}
