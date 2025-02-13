@@ -1,9 +1,0 @@
-name: Content Monitor
-    on: [push]
-    jobs:
-      alert:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Send Alert
-            run: |
-              curl -X POST -H 'Content-type: application/json' --data '{"text":"تم تغيير في الملفات!"}' [رابط_ويب_هوك_الخاص_بك]
