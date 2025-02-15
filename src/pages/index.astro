@@ -1,0 +1,40 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Stargazers from '../components/Stargazers.astro';
+---
+
+<MainLayout>
+  <section class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-8">الكتب المقدسة</h1>
+    
+    <div 
+      id="books-container"
+      class="grid md:grid-cols-3 gap-6"
+      hx-get="/books/quran.json"
+      hx-trigger="load"
+      hx-swap="innerHTML"
+    >
+      <!-- سيتم ملؤه ديناميكيًا -->
+    </div>
+
+    <Stargazers />
+  </section>
+</MainLayout>
+
+<script>
+// حفظ التقدم المحلي
+if('localStorage' in window) {
+  localStorage.setItem('lastVisited', new Date().toISOString());
+}
+
+// DeepSeek Monitoring
+window.addEventListener('load', () => {
+  fetch('https://api.deepseek.com/monitor', {
+    method: 'POST',
+    body: JSON.stringify({
+      site: 'humanverse',
+      event: 'page_load'
+    })
+  });
+});
+</script>
