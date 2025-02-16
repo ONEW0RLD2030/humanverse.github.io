@@ -9,3 +9,5 @@ touch dist/.nojekyll
      git add dist/.nojekyll
      git commit -m "Add .nojekyll to disable Jekyll processing"
      git push origin main
+npm run build
+     ls -la dist/
