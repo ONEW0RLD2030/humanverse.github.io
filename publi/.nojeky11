@@ -1,0 +1,3 @@
+touch dist/.nojekyll
+  git add dist/.nojekyll
+  git commit -m "Add .nojekyll"
