@@ -11,3 +11,5 @@ touch dist/.nojekyll
      git push origin main
 npm run build
      ls -la dist/
+npm run build
+   serve dist/ # افتح http://localhost:3000 للتحقق
