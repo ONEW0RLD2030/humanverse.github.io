@@ -20,3 +20,11 @@ export default defineConfig({
     }]
   }
 });
+export default defineConfig({
+  integrations: [tailwind()],
+  vite: {
+    build: {
+      assetsInlineLimit: 0 // لضمان عدم تكسير ملفات SW
+    }
+  }
+});
