@@ -62,3 +62,8 @@
     "last 5 version"
   ]
 }
+{
+  "scripts": {
+    "build": "astro build && cp -R public/* dist/"
+  }
+}
